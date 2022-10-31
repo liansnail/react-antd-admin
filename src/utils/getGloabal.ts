@@ -1,5 +1,6 @@
 export function getGlobalState() {
-  const device = /(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent) ? 'MOBILE' : 'DESKTOP';
+  // const device = /(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent) ? 'MOBILE' : 'DESKTOP';
+  const device = 'DESKTOP';
   const collapsed = device !== 'DESKTOP';
 
   return {

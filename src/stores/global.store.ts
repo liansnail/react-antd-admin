@@ -5,11 +5,12 @@ interface State {
   loading: boolean;
 }
 
-const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-const userTheme = localStorage.getItem('theme') as State['theme'];
+// const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+// const userTheme = localStorage.getItem('theme') as State['theme'];
 
 const initialState: State = {
-  theme: userTheme || systemTheme,
+  // theme: userTheme || systemTheme,
+  theme: 'light',
   loading: false,
 };
 

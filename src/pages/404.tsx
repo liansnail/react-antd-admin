@@ -1,10 +1,12 @@
 import { Button, Result } from 'antd';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { useLocale } from '@/locales';
+import { useRouter } from 'next/router';
 
 const NotFoundPage: React.FC = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const { formatMessage } = useLocale();
+  const router = useRouter();
 
   return (
     <Result
@@ -12,7 +14,7 @@ const NotFoundPage: React.FC = () => {
       title="404"
       subTitle={formatMessage({ id: 'gloabal.tips.notfound' })}
       extra={
-        <Button type="primary" onClick={() => navigate('/')}>
+        <Button type="primary" onClick={() => router.push('/')}>
           {formatMessage({ id: 'gloabal.tips.backHome' })}
         </Button>
       }

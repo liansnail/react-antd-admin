@@ -8,12 +8,12 @@ import { getGlobalState } from '@/utils/getGloabal';
 const initialState: UserState = {
   ...getGlobalState(),
   noticeCount: 0,
-  locale: (localStorage.getItem('locale')! || 'en_US') as Locale,
-  newUser: JSON.parse(localStorage.getItem('newUser')!) ?? true,
-  logged: localStorage.getItem('t') ? true : false,
+  locale: 'ko_KR',
+  newUser: true,
+  logged: false,
   menuList: [],
-  username: localStorage.getItem('username') || '',
-  role: (localStorage.getItem('username') || '') as Role,
+  username: '',
+  role: '',
 };
 
 const userSlice = createSlice({
